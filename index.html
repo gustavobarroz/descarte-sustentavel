@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Descarte Sustentável - Ribeirão Pires</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icoeco.png" type="image/x-icon">
+    </head>
+    
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="img/eco.png" alt="Logotipo" style="max-width: 250px;"> <!-- Adicione o logotipo aqui -->
+        </div>
+        <h1>Mapa de Descarte Sustentável</h1>
+    </header>
+
+    <section id="importance" style="background-color: #e9f5e9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px auto; width: 80%; text-align: center;">
+        <h2 style="color: #4CAF50; margin-bottom: 15px;">Importância do Descarte Correto</h2>
+        <p style="color: #555; font-size: 16px; line-height: 1.6;">
+            O descarte adequado de resíduos é crucial para a proteção ambiental e a saúde pública. Aqui estão algumas razões que destacam a importância dessa prática:
+        </p>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="background-color: #fff; margin: 10px 0; padding: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <strong style="color: #4CAF50;">Proteção Ambiental:</strong> O descarte inadequado de resíduos pode levar à contaminação do solo e da água, além de aumentar a emissão de gases de efeito estufa, como o metano, que contribui significativamente para as mudanças climáticas.
+            </li>
+            <li style="background-color: #fff; margin: 10px 0; padding: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <strong style="color: #4CAF50;">Cumprimento de Metas de Reciclagem:</strong> Uma gestão adequada de resíduos é essencial para atingir as metas de reciclagem, reduzindo a necessidade de novos materiais e a poluição gerada pela produção de novos produtos. Atualmente, apenas cerca de 16% dos resíduos são reciclados globalmente.
+            </li>
+            <li style="background-color: #fff; margin: 10px 0; padding: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <strong style="color: #4CAF50;">Implicações para a Saúde:</strong> O descarte inadequado, especialmente de resíduos eletrônicos, pode ter graves consequências para a saúde. A água contaminada, por exemplo, é responsável por centenas de milhares de mortes anualmente devido a doenças relacionadas.
+            </li>
+        </ul>
+        <p style="color: #555; font-size: 16px; line-height: 1.6;">
+            Por isso, é fundamental adotar práticas de descarte responsável, não apenas para proteger o meio ambiente, mas também para garantir a saúde e o bem-estar das comunidades. Para mais informações, confira o artigo completo em 
+            <a href="https://wasteclear.com.au/the-importance-of-proper-waste-disposal/" target="_blank" style="color: #007BFF; text-decoration: underline;">Waste Clear</a>.
+        </p>
+    </section>
+    
+    
+    
+    <h2 id="filter-title">Selecione os Tipos de Descarte no Mapa</h2>
+    <div id="filters">
+        <button class="filter-button" onclick="showAll()">Mostrar Todos</button>
+        <button class="filter-button" onclick="showRecyclables()">Materiais Recicláveis</button>
+        <button class="filter-button" onclick="showElectronics()">Pilhas e Baterias</button>
+        <button class="filter-button" onclick="showLamps()">Lâmpadas e Medicamentos Usados</button>
+        <button class="filter-button" onclick="showOil()">Óleo de Cozinha</button>
+    </div>
+    
+    <div id="map"></div>
+
+    <section id="about" class="about-container">
+        <h2>Sobre o Projeto</h2>
+        <p>
+            Este site foi criado por <strong>Gustavo Oliveira Barros</strong>, estudante de 
+            <strong>Análise e Desenvolvimento de Sistemas</strong>, como parte de uma atividade de 
+            extensão acadêmica. O objetivo deste projeto é promover a conscientização sobre a importância 
+            do descarte correto de resíduos e materiais recicláveis na comunidade de 
+            <strong>Ribeirão Pires</strong>.
+        </p>
+        <p>
+            Aqui, você encontrará informações sobre os locais de coleta para diferentes tipos de materiais, 
+            como recicláveis, eletrônicos e óleos usados. Ao facilitar o acesso a essas informações, esperamos 
+            incentivar práticas mais sustentáveis e responsáveis, contribuindo para um ambiente mais limpo e 
+            saudável para todos os moradores de Ribeirão Pires.
+        </p>
+        <p>
+            Vamos juntos fazer a diferença e cuidar do nosso planeta!
+        </p>
+    </section>    
+    
+
+    <div id="contact" class="contact-container">
+        <h2>Entre em Contato</h2>
+        <p>Para dúvidas, entre em contato com a Prefeitura:</p>
+        <p>Telefone: <strong>(11) 4828-9123</strong></p>
+        <a id="official-site-button" href="http://www.ribeiraopires.sp.gov.br/" target="_blank">Visite o site oficial da Prefeitura</a>
+    </div>
+    
+    
+
+    <footer>
+        <p>&copy; Site desenvolvido por <strong>Gustavo Oliveira Barros</strong> - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/points.js"></script>
+</body>
+</html>

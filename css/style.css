@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        display: none;
+    }
+
+    header img {
+        margin: 0 auto;
+    }
+
+
+    #map {
+        height: 300px;
+        /* Reduz a altura do mapa em telas menores */
+    }
+
+    #filters {
+        flex-direction: row;
+        /* Mantém a direção dos botões em linha */
+        flex-wrap: wrap;
+        /* Permite que os botões quebrem para a próxima linha se necessário */
+        justify-content: center;
+        /* Centraliza os botões */
+    }
+
+    #filters button {
+        margin: 5px;
+        /* Margem reduzida entre os botões */
+        width: 45%;
+        /* Largura dos botões em telas menores */
+        max-width: 150px;
+        /* Limite máximo de largura para os botões */
+        padding: 8px;
+        /* Reduz o padding dos botões */
+        font-size: 14px;
+        /* Reduz o tamanho da fonte */
+    }
+
+    .contact-container {
+        width: 95%;
+        /* Aumenta a largura do contêiner em telas menores */
+    }
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    /* Usando a fonte Roboto */
+    margin: 0;
+    padding: 0;
+    background-color: #F4F4F4;
+    /* Cor de fundo */
+    color: #333333;
+    /* Cor do texto */
+}
+
+header {
+    background-color: #228B22;
+    /* Verde Floresta */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    /* Espaçamento interno aumentado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra do cabeçalho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Para adicionar ícones ou logotipo, se necessário */
+}
+
+h1,
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    /* Usando o peso da fonte bold */
+    flex: 75%;
+    margin: 0;
+    /* Remove a margem do título */
+    font-size: 3em;
+    /* Tamanho maior para o título */
+    font-weight: bold;
+    /* Negrito para o título */
+}
+
+.header-logo {
+    flex: 25%;
+    /* Largura do logotipo */
+}
+
+
+#map {
+    height: 500px;
+    /* Altura do mapa */
+    margin: 20px auto;
+    /* Margem em cima e embaixo */
+    width: 82%;
+    /* Largura do mapa */
+    border: 2px solid #ddd;
+    /* Borda do mapa */
+    border-radius: 10px;
+    /* Cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra do mapa */
+}
+
+#filters {
+    width: 80%;
+    display: flex;
+    /* Flexbox para layout */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza os filtros horizontalmente */
+    margin: 20px 0;
+    /* Margem em cima e embaixo */
+}
+
+#filter-title {
+    color: #4CAF50; /* Cor do título */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Espaçamento em cima e embaixo */
+    font-size: 1.5em; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto mais forte */
+}
+
+
+.filter-button {
+    /* Classe específica para botões de filtro */
+    margin: 0 10px;
+    /* Margem nos lados dos botões */
+    padding:5px 10px;
+    /* Espaçamento interno maior */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    background-color: #228B22;
+    /* Verde Floresta */
+    color: white;
+    /* Cor do texto do botão */
+    /* Cor do texto do botão *
+    /* Cor do botão */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 5px;
+    /* Cantos arredondados */
+    cursor: pointer;
+    /* Cursor de ponteiro ao passar sobre o botão */
+    transition: background-color 0.3s, transform 0.2s;
+    /* Efeito de transição */
+    flex: 1 1 150px;
+    /* Flexibilidade para os botões */
+    min-width: 120px;
+    /* Largura mínima para os botões */
+}
+
+.filter-button:hover {
+    background-color: #1C7A1C;
+    /* Tom mais escuro */
+    /* Cor do botão ao passar o mouse */
+    transform: scale(1.05);
+    /* Efeito de aumento ao passar o mouse */
+}
+
+footer {
+    text-align: center;
+    /* Centraliza o texto do rodapé */
+    padding: 30px 0;
+    /* Espaçamento interno */
+    background-color: #34495E;
+    /* Cor do rodapé */
+    color: white;
+    /* Cor do texto do rodapé */
+    /* Cor do texto do rodapé */
+    position: relative;
+    /* Para o posicionamento */
+    bottom: 0;
+    /* Posiciona na parte inferior */
+    width: 100%;
+    /* Largura total */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra do rodapé */
+}
+
+.contact-container {
+    background-color: #fff;
+    /* Cor de fundo mais clara */
+    border: 1px solid #ddd;
+    /* Borda suave */
+    border-radius: 10px;
+    /* Cantos mais arredondados */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin: 20px auto;
+    /* Margem automática para centralizar */
+    width: 80%;
+    /* Largura do contêiner */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.contact-container h2 {
+    color: #4CAF50;
+    /* Cor do título */
+    margin-bottom: 15px;
+    /* Espaçamento abaixo do título */
+    font-size: 1.8em;
+    /* Tamanho do título */
+}
+
+.contact-container p {
+    margin: 5px 0;
+    /* Margem para os parágrafos */
+    color: #555;
+    /* Cor do texto */
+}
+
+#official-site-button {
+    display: inline-block;
+    /* Exibir como bloco */
+    margin-top: 15px;
+    /* Margem em cima do botão */
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    /* Cor do texto do botão */
+    background-color: #007BFF;
+    /* Cor do botão */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 5px;
+    /* Cantos arredondados */
+    text-decoration: none;
+    /* Remove sublinhado */
+    transition: background-color 0.3s;
+    /* Efeito de transição */
+}
+
+#official-site-button:hover {
+    background-color: #0056b3;
+    /* Cor do botão ao passar o mouse */
+}
+
+/* Adicionando estilo aos links */
+a {
+    color: #007BFF;
+    /* Cor dos links */
+    text-decoration: none;
+    /* Remove sublinhado */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Sublinha ao passar o mouse */
+}
+
+.about-container {
+    background-color: #f9f9f9;
+    /* Cor de fundo mais clara */
+    border: 1px solid #ddd;
+    /* Borda suave */
+    border-radius: 10px;
+    /* Cantos arredondados */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin: 20px auto;
+    /* Margem automática para centralizar */
+    width: 80%;
+    /* Largura do contêiner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.about-container h2 {
+    color: #4CAF50;
+    /* Cor do título */
+    margin-bottom: 15px;
+    /* Espaçamento abaixo do título */
+}
+
+.about-container p {
+    margin: 5px 0;
+    /* Margem para os parágrafos */
+    color: #555;
+    /* Cor do texto */
+    line-height: 1.5;
+    /* Espaçamento entre linhas */
+}
